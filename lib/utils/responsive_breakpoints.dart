@@ -22,7 +22,6 @@ class ResponsiveBreakpoints {
     } else if (width < breakpoints.mobile) {
       return DeviceScreenType.mobile;
     } else if (width < breakpoints.tablet) {
-      log('$width');
       return DeviceScreenType.tablet;
     } else {
       return DeviceScreenType.desktop;
