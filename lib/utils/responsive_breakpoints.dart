@@ -1,5 +1,4 @@
-
-import 'package:dev_utils/utils/responsive_builder.dart';
+import 'package:dev_utils/utils/device_screen_type.dart';
 import 'package:flutter/material.dart';
 
 class ResponsiveBreakpoints {

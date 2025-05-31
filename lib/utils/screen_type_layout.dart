@@ -1,12 +1,8 @@
+import 'package:dev_utils/utils/device_screen_type.dart' show DeviceScreenType;
 import 'package:flutter/material.dart';
 import 'package:dev_utils/utils/responsive_breakpoints.dart'; 
 
-enum DeviceScreenType {
-  watch,
-  mobile,
-  tablet,
-  desktop,
-}
+
 
 class ScreenTypeLayout extends StatelessWidget {
   final Widget Function(BuildContext)? watch;
