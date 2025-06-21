@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HoverOver extends StatefulWidget {
-  const HoverOver({super.key, required this.builder, this.cursor});
+  const HoverOver({super.key, required this.builder, this.cursor, this.onTap});
   final Widget Function(bool isHovering) builder;
   final MouseCursor? cursor;
+  void Function()? onTap
 
   @override
   State<HoverOver> createState() => _HoverOverState();
@@ -23,7 +24,10 @@ class _HoverOverState extends State<HoverOver> {
       cursor: widget.cursor,
       onEnter: (event) => setHovering(true),
       onExit: (event) => setHovering(false),
-      child: widget.builder(isHovering),
+      child: GestureDetector(
+        onTap: widget.onTap,
+        child: widget.builder(isHovering),
+      ),
     );
   }
 }
