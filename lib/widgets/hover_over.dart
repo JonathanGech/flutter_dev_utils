@@ -4,7 +4,7 @@ class HoverOver extends StatefulWidget {
   const HoverOver({super.key, required this.builder, this.cursor, this.onTap});
   final Widget Function(bool isHovering) builder;
   final MouseCursor? cursor;
-  void Function()? onTap
+  final void Function()? onTap
 
   @override
   State<HoverOver> createState() => _HoverOverState();
