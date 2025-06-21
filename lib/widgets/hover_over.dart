@@ -4,7 +4,7 @@ class HoverOver extends StatefulWidget {
   const HoverOver({super.key, required this.builder, this.cursor, this.onTap});
   final Widget Function(bool isHovering) builder;
   final MouseCursor? cursor;
-  final void Function()? onTap
+  final void Function()? onTap;
 
   @override
   State<HoverOver> createState() => _HoverOverState();
@@ -21,7 +21,7 @@ class _HoverOverState extends State<HoverOver> {
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      cursor: widget.cursor,
+      cursor: widget.cursor ?? MouseCursor.defer,
       onEnter: (event) => setHovering(true),
       onExit: (event) => setHovering(false),
       child: GestureDetector(
